@@ -11,19 +11,12 @@ void addNewTask()
     Console.WriteLine("1. To Do");
     Console.WriteLine("2. In Progress");
     Console.WriteLine("3. Done");
-    int taskStatus = Convert.ToInt32(Console.ReadLine());
+    int taskStatusNum = Convert.ToInt32(Console.ReadLine());
     taskTitleAndDisc.Add(taskTitle,taskDisc);
-    switch(taskStatus){
-        case 1:
-        taskTitleAndStatus.Add(taskTitle,"To Do");
-        break;
-        case 2:
-        taskTitleAndStatus.Add(taskTitle,"In Progress");
-        break;
-        case 3:
-        taskTitleAndStatus.Add(taskTitle,"Done");
-        break;
-    }
+
+    string taskStatus = chooseStatus();
+    taskTitleAndStatus.Add(taskTitle, taskStatus);
+
 }
 
 void showAllTasks()
@@ -67,6 +60,36 @@ void showAllTasks()
     
 }
 
+string chooseStatus()
+{
+    Console.WriteLine("Enter a status number:");
+    Console.WriteLine("1. In Progress");
+    Console.WriteLine("2. To DO");
+    Console.WriteLine("3. Done");
+    int statusChoice = Convert.ToInt32(Console.ReadLine());
+    string status = "";
+
+    switch(statusChoice)
+    {
+        case 1:
+            status = "In Progress";
+            break;
+        case 2:
+            status = "To Do";
+            break;
+        case 3:
+            status = "Done";
+            break;
+        default:
+            Console.WriteLine("Please choose one of the three status");
+            status = chooseStatus();
+            break;
+    }
+    return status;
+}
+
+
+
 void changeStatus()
 {
     Console.WriteLine("All Tasks");
@@ -78,28 +101,14 @@ void changeStatus()
     Console.WriteLine("Enter Task title to change status:");
     string titleStatusToChange = Console.ReadLine();
     Console.WriteLine("Current Status: " + taskTitleAndStatus[titleStatusToChange]);
-    Console.WriteLine("Enter new status number:");
-    Console.WriteLine("1. In Progress");
-    Console.WriteLine("2. To DO");
-    Console.WriteLine("3. Done");
-    int statusChoice = Convert.ToInt32(Console.ReadLine());
 
-    switch(statusChoice)
-    {
-        case 1:
-            taskTitleAndStatus[titleStatusToChange] = "In Progress";
-            break;
-        case 2:
-            taskTitleAndStatus[titleStatusToChange] = "To Do";
-            break;
-        case 3:
-            taskTitleAndStatus[titleStatusToChange] = "Done";
-            break;
-        
-    }
-
+    string status = chooseStatus();
+    taskTitleAndStatus[titleStatusToChange] = status;
+    Console.WriteLine("Status Changed Successefully");
 }
+    
 
+    
 bool f = true;
 while(f){
     Console.WriteLine("1. Add new task");
