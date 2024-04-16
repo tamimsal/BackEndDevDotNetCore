@@ -7,11 +7,6 @@ void addNewTask()
     string taskTitle = Console.ReadLine();
     Console.WriteLine("Enter task Discreption:");
     string taskDisc = Console.ReadLine();
-    Console.WriteLine("Enter task Status number:");
-    Console.WriteLine("1. To Do");
-    Console.WriteLine("2. In Progress");
-    Console.WriteLine("3. Done");
-    int taskStatusNum = Convert.ToInt32(Console.ReadLine());
     taskTitleAndDisc.Add(taskTitle,taskDisc);
 
     string taskStatus = chooseStatus();
