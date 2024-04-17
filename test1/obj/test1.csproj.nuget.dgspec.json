@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/admin/Documents/Coding Projects/dotNETCoreTraining/ConsoleApp1/ConsoleApp1.csproj": {}
+    "/Users/admin/Documents/Coding Projects/dotNETCoreTraining/test1/test1.csproj": {}
   },
   "projects": {
-    "/Users/admin/Documents/Coding Projects/dotNETCoreTraining/ConsoleApp1/ConsoleApp1.csproj": {
+    "/Users/admin/Documents/Coding Projects/dotNETCoreTraining/test1/test1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/admin/Documents/Coding Projects/dotNETCoreTraining/ConsoleApp1/ConsoleApp1.csproj",
-        "projectName": "ConsoleApp1",
-        "projectPath": "/Users/admin/Documents/Coding Projects/dotNETCoreTraining/ConsoleApp1/ConsoleApp1.csproj",
+        "projectUniqueName": "/Users/admin/Documents/Coding Projects/dotNETCoreTraining/test1/test1.csproj",
+        "projectName": "test1",
+        "projectPath": "/Users/admin/Documents/Coding Projects/dotNETCoreTraining/test1/test1.csproj",
         "packagesPath": "/Users/admin/.nuget/packages/",
-        "outputPath": "/Users/admin/Documents/Coding Projects/dotNETCoreTraining/ConsoleApp1/obj/",
+        "outputPath": "/Users/admin/Documents/Coding Projects/dotNETCoreTraining/test1/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/admin/.nuget/NuGet/NuGet.Config"

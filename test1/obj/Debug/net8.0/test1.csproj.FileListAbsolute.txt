@@ -1,0 +1,15 @@
+/Users/admin/Documents/Coding Projects/dotNETCoreTraining/test1/bin/Debug/net8.0/test1
+/Users/admin/Documents/Coding Projects/dotNETCoreTraining/test1/bin/Debug/net8.0/test1.deps.json
+/Users/admin/Documents/Coding Projects/dotNETCoreTraining/test1/bin/Debug/net8.0/test1.runtimeconfig.json
+/Users/admin/Documents/Coding Projects/dotNETCoreTraining/test1/bin/Debug/net8.0/test1.dll
+/Users/admin/Documents/Coding Projects/dotNETCoreTraining/test1/bin/Debug/net8.0/test1.pdb
+/Users/admin/Documents/Coding Projects/dotNETCoreTraining/test1/obj/Debug/net8.0/test1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/admin/Documents/Coding Projects/dotNETCoreTraining/test1/obj/Debug/net8.0/test1.AssemblyInfoInputs.cache
+/Users/admin/Documents/Coding Projects/dotNETCoreTraining/test1/obj/Debug/net8.0/test1.AssemblyInfo.cs
+/Users/admin/Documents/Coding Projects/dotNETCoreTraining/test1/obj/Debug/net8.0/test1.csproj.CoreCompileInputs.cache
+/Users/admin/Documents/Coding Projects/dotNETCoreTraining/test1/obj/Debug/net8.0/test1.sourcelink.json
+/Users/admin/Documents/Coding Projects/dotNETCoreTraining/test1/obj/Debug/net8.0/test1.dll
+/Users/admin/Documents/Coding Projects/dotNETCoreTraining/test1/obj/Debug/net8.0/refint/test1.dll
+/Users/admin/Documents/Coding Projects/dotNETCoreTraining/test1/obj/Debug/net8.0/test1.pdb
+/Users/admin/Documents/Coding Projects/dotNETCoreTraining/test1/obj/Debug/net8.0/test1.genruntimeconfig.cache
+/Users/admin/Documents/Coding Projects/dotNETCoreTraining/test1/obj/Debug/net8.0/ref/test1.dll
