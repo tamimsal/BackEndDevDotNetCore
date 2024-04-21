@@ -1,9 +1,9 @@
-﻿using System;
+﻿//To Do List v1.1
+//Done By: Tamim Salhab
+
+using System;
 using System.Data.Common;
-
-
 class ToDoMain { 
-  
     // Main Method 
     static public void Main(String[] args) 
     { 
@@ -11,7 +11,6 @@ class ToDoMain {
         var id = 0;
         var toStop = true;
         int Done = 0, ToDo = 0, InProgress = 0;
-
         void addNewTask() 
         {
             Console.WriteLine("Enter task title:");
@@ -32,6 +31,7 @@ class ToDoMain {
         } 
         string chooseStatus()
         {
+            Console.WriteLine("--------------------------------");
             Console.WriteLine("Enter a status number:");
             Console.WriteLine("1. In Progress");
             Console.WriteLine("2. To Do");
@@ -42,7 +42,6 @@ class ToDoMain {
             }
             catch{
                 Console.WriteLine("Please Enter one of the avaliable numbers");
-
             }
             string status = "";
             switch(statusChoice)
@@ -76,8 +75,7 @@ class ToDoMain {
         void changeStatus()
         {
             Console.WriteLine("All Tasks");
-            foreach (var task in tasks)
-            {
+            foreach (var task in tasks){
                 Console.WriteLine("{0} : {1} : {2}",task.getSetTaskId, task.getSetTaskName, task.getSetTaskStatus );
             }
             Console.WriteLine("Enter Task number to change status:");
@@ -87,7 +85,6 @@ class ToDoMain {
             }
             catch{
                 Console.WriteLine("Please Enter one of the avaliable numbers");
-
             }
             var found = false;
             var index = 0;
@@ -120,8 +117,7 @@ class ToDoMain {
         void printTasks(string status, int count){
             if(status == ""){
                 if(tasks.Count() > 0){
-                    foreach(var task in tasks) 
-                    {
+                    foreach(var task in tasks){
                         Console.WriteLine("Task: {0} \nDiscreption: {1} \nStatus: {2} ", task.getSetTaskName, task.getSetTaskDisc, task.getSetTaskStatus);
                     }
                 }
@@ -131,21 +127,20 @@ class ToDoMain {
             }
             else{
                 if(count > 0){
-                foreach(var task in tasks){
-                    if(task.getSetTaskStatus == status){
-                        Console.WriteLine("Task: {0} \nDiscreption: {1} \nStatus: {2} ", task.getSetTaskName, task.getSetTaskDisc, task.getSetTaskStatus);
+                    foreach(var task in tasks){
+                        if(task.getSetTaskStatus == status){
+                            Console.WriteLine("Task: {0} \nDiscreption: {1} \nStatus: {2} ", task.getSetTaskName, task.getSetTaskDisc, task.getSetTaskStatus);
+                        }
                     }
-                }
                 }
                 else{
                     Console.WriteLine("No {0} status found", status); 
                 }
             }
-            
         }
-
         void showAllTasks()
         {    
+            Console.WriteLine("--------------------------------");
             Console.WriteLine("Enter the number of tasks category:");
             Console.WriteLine("1. All Tasks");
             Console.WriteLine("2. To Do Tasks");
@@ -181,20 +176,19 @@ class ToDoMain {
                 
                 break;
                 default: 
-                Console.WriteLine(""); // do this
+                Console.WriteLine("Please Enter one of the avaliable choices");
+                mainMethod();
                 break;  
             }
         }
-
         void mainMethod(){
             while(toStop){
                 Console.WriteLine("--------------------------------");
+                Console.WriteLine("Enter your choice:");
                 Console.WriteLine("1. Add new task");
                 Console.WriteLine("2. Show tasks");
                 Console.WriteLine("3. Change status");
                 Console.WriteLine("4. Exit");
-                Console.WriteLine("Enter your choice:");
-                
                 int choice = 0;
                 try {
                     choice = Convert.ToInt32(Console.ReadLine());
