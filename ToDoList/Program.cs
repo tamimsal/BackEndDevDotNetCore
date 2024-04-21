@@ -11,25 +11,25 @@ class ToDoMain {
         var id = 0;
         var toStop = true;
         int Done = 0, ToDo = 0, InProgress = 0;
-        void addNewTask() 
+        void AddNewTask() 
         {
             Console.WriteLine("Enter task title:");
             string? taskTitle = Console.ReadLine();
             if(taskTitle == ""){
                 Console.WriteLine("Error, please enter non empty name");
-                mainMethod();
+                MainMethod();
             }
             else{
                 Console.WriteLine("Enter task description:");
                 string? taskDisc = Console.ReadLine();            
-                string taskStatus = "To Do";
-                int id = generateId();
+                Status taskStatus = Status.toDo;
+                int id = GenerateId();
                 Task newTask = new Task(id, taskTitle, taskDisc, taskStatus);
                 ToDo++;
                 tasks.Add(newTask);
             }
         } 
-        string chooseStatus()
+        Status ChooseStatus()
         {
             Console.WriteLine("--------------------------------");
             Console.WriteLine("Enter a status number:");
@@ -43,36 +43,36 @@ class ToDoMain {
             catch{
                 Console.WriteLine("Please Enter one of the avaliable numbers");
             }
-            string status = "";
+            Status status;
             switch(statusChoice)
             {
                 case 1:
-                status = "In Progress";
+                status = Status.inProgress;
                 InProgress++;
                 break;
 
                 case 2:
-                status = "To Do";
+                status = Status.toDo;
                 ToDo++;
                 break;
 
                 case 3:
-                status = "Done";
+                status = Status.done;
                 Done++;
                 break;
 
                 default:
                 Console.WriteLine("Please choose one of the three status");
-                status = chooseStatus();
+                status = ChooseStatus();
                 break;
             }
             return status;
         }
-        int generateId(){
+        int GenerateId(){
             id++;
             return id;
         }
-        void changeStatus()
+        void ChangeStatus()
         {
             Console.WriteLine("All Tasks");
             foreach (var task in tasks){
@@ -92,33 +92,53 @@ class ToDoMain {
                 if(taskIdToChangeStatus == task.getSetTaskId){
                     found = true;
                     index = task.getSetTaskId - 1;
-                    string oldStatus = task.getSetTaskStatus;
+                    Status oldStatus = task.getSetTaskStatus;
                     switch(oldStatus){
-                        case "To Do":
+                        case Status.toDo:
                         ToDo--;
                         break;
-                        case "In Progress":
+                        case Status.inProgress:
                         InProgress--;
                         break;
-                        case "Done":
+                        case Status.done:
                         Done--;
                         break;
                     }
                 }
             }
             if(found == true){
-                string newStatus = chooseStatus();
+                Status newStatus = ChooseStatus();
                 tasks[index].getSetTaskStatus = newStatus;
             }
             else{
                 Console.WriteLine("Enter valid number");
             }
         }
-        void printTasks(string status, int count){
-            if(status == ""){
-                if(tasks.Count() > 0){
+        string GetToPrintStatus(Status status){
+            string toPrintStatus = "";
+            switch(status){
+                case Status.done:
+                toPrintStatus = "Done";
+                break;
+                case Status.toDo:
+                toPrintStatus = "To Do";
+                break;
+                case Status.inProgress:
+                toPrintStatus = "In Progress";
+                break;
+                case Status.emptyStatus:
+                toPrintStatus = "";
+                break;
+            }
+            return toPrintStatus;
+        }
+        void PrintTasks(Status status, int count){
+            
+            
+            if(Status.emptyStatus == status){
+                if(count > 0){
                     foreach(var task in tasks){
-                        Console.WriteLine("Task: {0} \nDiscreption: {1} \nStatus: {2} ", task.getSetTaskName, task.getSetTaskDisc, task.getSetTaskStatus);
+                        Console.WriteLine("Task: {0} \nDiscreption: {1} \nStatus: {2} ", task.getSetTaskName, task.getSetTaskDisc, GetToPrintStatus(task.getSetTaskStatus));
                     }
                 }
                 else{
@@ -129,16 +149,16 @@ class ToDoMain {
                 if(count > 0){
                     foreach(var task in tasks){
                         if(task.getSetTaskStatus == status){
-                            Console.WriteLine("Task: {0} \nDiscreption: {1} \nStatus: {2} ", task.getSetTaskName, task.getSetTaskDisc, task.getSetTaskStatus);
+                            Console.WriteLine("Task: {0} \nDiscreption: {1} \nStatus: {2} ", task.getSetTaskName, task.getSetTaskDisc, GetToPrintStatus(task.getSetTaskStatus));
                         }
                     }
                 }
                 else{
-                    Console.WriteLine("No {0} status found", status); 
+                    Console.WriteLine("No tasks added!");
                 }
             }
         }
-        void showAllTasks()
+        void ShowAllTasks()
         {    
             Console.WriteLine("--------------------------------");
             Console.WriteLine("Enter the number of tasks category:");
@@ -157,31 +177,31 @@ class ToDoMain {
             switch(catChoice){
                 case 1:
                 count = tasks.Count();
-                printTasks("", count);
+                PrintTasks(Status.emptyStatus, count);
 
                 break;
                 case 2:
                 count = ToDo;
-                printTasks("To Do", count);
+                PrintTasks(Status.toDo, count);
                 
                 break;
                 case 3:
                 count = InProgress;
-                printTasks("In Progress", count);
+                PrintTasks(Status.inProgress, count);
                 
                 break;
                 case 4:
                 count = Done;
-                printTasks("Done", count);
+                PrintTasks(Status.done, count);
                 
                 break;
                 default: 
                 Console.WriteLine("Please Enter one of the avaliable choices");
-                mainMethod();
+                MainMethod();
                 break;  
             }
         }
-        void mainMethod(){
+        void MainMethod(){
             while(toStop){
                 Console.WriteLine("--------------------------------");
                 Console.WriteLine("Enter your choice:");
@@ -198,15 +218,15 @@ class ToDoMain {
                 }   
                 switch(choice){
                     case 1:
-                    addNewTask();
+                    AddNewTask();
                     break;
 
                     case 2:
-                    showAllTasks();
+                    ShowAllTasks();
                     break;
 
                     case 3:
-                    changeStatus();
+                    ChangeStatus();
                     break;
 
                     case 4:
@@ -215,22 +235,26 @@ class ToDoMain {
                 }
             }
         }
-        mainMethod();
+        MainMethod();
     } 
 } 
 enum Status{
     toDo,
     done,
-    inprogress
+    inProgress,
+    emptyStatus
 }
 class Task{
     private int taskId;
     private string taskName;
     private string taskDisc;
-    private string taskStatus;
+    private Status taskStatus;
+
+    Guid guidId = Guid.NewGuid();
+
     public Task(){
     }
-    public Task(int id, string name, string disc, string status){
+    public Task(int id, string name, string disc, Status status){
         taskId = id;
         taskName = name;
         taskDisc = disc;
@@ -247,7 +271,7 @@ class Task{
         get{return taskDisc;}
         set{taskDisc = value;}
     }
-    public string getSetTaskStatus{
+    public Status getSetTaskStatus{
         get{return taskStatus;}
         set{taskStatus = value;}
     }
