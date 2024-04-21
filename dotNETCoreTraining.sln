@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDoListTask1", "ToDoListTask1\ToDoListTask1.csproj", "{1F863751-66A9-4E77-B99E-36E9402655F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoList", "ToDoList\ToDoList.csproj", "{93E3C183-4FA6-4D8F-8CC3-F9E6DC27986A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1F863751-66A9-4E77-B99E-36E9402655F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F863751-66A9-4E77-B99E-36E9402655F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F863751-66A9-4E77-B99E-36E9402655F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93E3C183-4FA6-4D8F-8CC3-F9E6DC27986A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93E3C183-4FA6-4D8F-8CC3-F9E6DC27986A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93E3C183-4FA6-4D8F-8CC3-F9E6DC27986A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93E3C183-4FA6-4D8F-8CC3-F9E6DC27986A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

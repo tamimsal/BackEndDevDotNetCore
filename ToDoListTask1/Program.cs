@@ -2,10 +2,24 @@
 //Done By: Tamim Salhab
 
 //declaring variables
-Dictionary<string, string> taskTitleAndDisc = new Dictionary<string, string>();
-Dictionary<string, string> taskTitleAndStatus = new Dictionary<string, string>();
-int ToDo = 0, InProgress = 0, Done = 0;
+
+
+
+
+
+var taskTitleAndDisc = new Dictionary<string, string>();
+Dictionary<string, string> taskTitleAndStatus = new();
+var ToDo = 0;
+int InProgress = 0, Done = 0;
 bool toStop = true;
+// enum statuses{
+//     todo = 0, inprogress = 0, done =0
+// }
+
+
+
+
+
 
 //adding new task method 
 void addNewTask() 
@@ -27,7 +41,7 @@ void showAllTasks()
     Console.WriteLine("2. To Do Tasks");
     Console.WriteLine("3. In Progress Tasks");
     Console.WriteLine("4. Done Tasks");
-    int catChoice = Convert.ToInt32(Console.ReadLine());
+    int.TryParse(Console.ReadLine(),out int catChoice);
     switch(catChoice){
         case 1:
         if(taskTitleAndDisc.Count() > 0){

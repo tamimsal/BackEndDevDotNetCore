@@ -1,0 +1,15 @@
+/Users/admin/Documents/Coding Projects/dotNETCoreTraining/ToDoList/bin/Debug/net8.0/ToDoList
+/Users/admin/Documents/Coding Projects/dotNETCoreTraining/ToDoList/bin/Debug/net8.0/ToDoList.deps.json
+/Users/admin/Documents/Coding Projects/dotNETCoreTraining/ToDoList/bin/Debug/net8.0/ToDoList.runtimeconfig.json
+/Users/admin/Documents/Coding Projects/dotNETCoreTraining/ToDoList/bin/Debug/net8.0/ToDoList.dll
+/Users/admin/Documents/Coding Projects/dotNETCoreTraining/ToDoList/bin/Debug/net8.0/ToDoList.pdb
+/Users/admin/Documents/Coding Projects/dotNETCoreTraining/ToDoList/obj/Debug/net8.0/ToDoList.GeneratedMSBuildEditorConfig.editorconfig
+/Users/admin/Documents/Coding Projects/dotNETCoreTraining/ToDoList/obj/Debug/net8.0/ToDoList.AssemblyInfoInputs.cache
+/Users/admin/Documents/Coding Projects/dotNETCoreTraining/ToDoList/obj/Debug/net8.0/ToDoList.AssemblyInfo.cs
+/Users/admin/Documents/Coding Projects/dotNETCoreTraining/ToDoList/obj/Debug/net8.0/ToDoList.csproj.CoreCompileInputs.cache
+/Users/admin/Documents/Coding Projects/dotNETCoreTraining/ToDoList/obj/Debug/net8.0/ToDoList.sourcelink.json
+/Users/admin/Documents/Coding Projects/dotNETCoreTraining/ToDoList/obj/Debug/net8.0/ToDoList.dll
+/Users/admin/Documents/Coding Projects/dotNETCoreTraining/ToDoList/obj/Debug/net8.0/refint/ToDoList.dll
+/Users/admin/Documents/Coding Projects/dotNETCoreTraining/ToDoList/obj/Debug/net8.0/ToDoList.pdb
+/Users/admin/Documents/Coding Projects/dotNETCoreTraining/ToDoList/obj/Debug/net8.0/ToDoList.genruntimeconfig.cache
+/Users/admin/Documents/Coding Projects/dotNETCoreTraining/ToDoList/obj/Debug/net8.0/ref/ToDoList.dll
