@@ -133,8 +133,6 @@ class ToDoMain {
             return toPrintStatus;
         }
         void PrintTasks(Status status, int count){
-            
-            
             if(Status.emptyStatus == status){
                 if(count > 0){
                     foreach(var task in tasks){
@@ -222,11 +220,21 @@ class ToDoMain {
                     break;
 
                     case 2:
-                    ShowAllTasks();
+                        if(tasks.Count() > 0){
+                            ShowAllTasks();
+                        }
+                        else{
+                            Console.WriteLine("No tasks were added yet");
+                        }
                     break;
 
                     case 3:
-                    ChangeStatus();
+                        if(tasks.Count() > 0){
+                            ChangeStatus();
+                        }
+                        else{
+                            Console.WriteLine("No tasks were added yet");
+                        }
                     break;
 
                     case 4:
